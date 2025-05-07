@@ -3,9 +3,7 @@ import NavBar from "@/components/NavBar";
 
 export default function PhysicsPage() {
   return (
-    <main className="flex">
-      <NavBar />
-      <section className="flex-1 pt-6  ml-0 md:ml-54">
+      <section >
         <div className="p-6">
           <h1 className="text-3xl font-bold mb-4 text-blue-800">
             Physics Experiments
@@ -159,8 +157,6 @@ export default function PhysicsPage() {
             motion, electricity, forces, and more.
           </p>
         </div>
-        <Footer />
       </section>
-    </main>
   );
 }

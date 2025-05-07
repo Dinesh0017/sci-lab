@@ -3,25 +3,29 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="text-foreground px-6 py-20 lg:py-32">
+    <section className="text-foreground px-6 py-20 lg:py-32 -mt-14 ml-10">
       <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row gap-12 items-center">
         {/* Text Section */}
-        <div className="space-y-6 text-center lg:text-left">
-          <p className="text-textprimary text-2xl font-semibold">Marketing</p>
-          <h1 className="text-4xl lg:text-5xl font-extrabold leading-tight text-primary">
-            Solutions that help <br /> businesses grow
+        <div className="space-y-6 text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
+          <p className="text-textprimary text-xl sm:text-2xl font-semibold tracking-wide">
+            Interactive Science Education
+          </p>
+
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-primary">
+            Explore. Experiment. Understand.
           </h1>
-          <p className="text-secondary max-w-md mx-auto lg:mx-0">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique
-            faucibus convallis semper condimentum.
+
+          <p className="text-secondary text-base sm:text-lg max-w-md mx-auto lg:mx-0">
+            Welcome to SciLab360 — where physics, chemistry, and ICT come alive
+            through hands-on simulations and dynamic learning experiences.
           </p>
 
           <div className="flex justify-center lg:justify-start gap-4 mt-6 flex-wrap">
-            <button className="bg-buttonprimary hover:bg-buttonhover text-white px-6 py-3 rounded-lg transition">
-              Contact
+            <button className="bg-buttonprimary hover:bg-buttonhover text-white px-6 py-3 rounded-lg transition duration-300 shadow-md">
+              Start Learning
             </button>
-            <button className="bg-background text-buttontext border border-buttontext hover:bg-buttonhover hover:text-white px-6 py-3 rounded-lg transition">
-              Services
+            <button className="bg-background text-buttontext border border-buttontext hover:bg-buttonhover hover:text-white px-6 py-3 rounded-lg transition duration-300 shadow-md">
+              Explore Simulations
             </button>
           </div>
         </div>
