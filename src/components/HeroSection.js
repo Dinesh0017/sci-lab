@@ -3,11 +3,14 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="text-foreground px-6 py-20 lg:py-32 -mt-14 ml-10">
+    <section className="text-foreground px-6 lg:py-32 -mt-14 ml-10">
       <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row gap-12 items-center">
         {/* Text Section */}
         <div className="space-y-6 text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
-          <p className="text-textprimary text-xl sm:text-2xl font-semibold tracking-wide">
+          <p
+            className="text-textprimary text-xl sm:text-2xl font-semibold tracking-wide"
+            style={{ textShadow: "2px 2px 6px  rgba(147, 197, 253, 0.7)" }}
+          >
             Interactive Science Education
           </p>
 
@@ -77,6 +80,7 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
+      <hr className="mt-16 border-2 border-gray-300" />
     </section>
   );
 }

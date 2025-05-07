@@ -89,14 +89,19 @@ export default function TestimonialsSection() {
   );
 
   return (
-    <section className="bg-primary text-white py-20 px-6">
+    <section className=" text-white pt-20 px-6 ">
       <div className="max-w-6xl mx-auto text-center space-y-12">
-        <h2 className="text-3xl lg:text-4xl font-bold">What Our Users Say</h2>
+        <h2
+          className="text-3xl md:text-4xl font-extrabold text-textprimary"
+          style={{ textShadow: "2px 2px 6px rgba(147, 197, 253, 0.7)" }}
+        >
+          What Our Users Say
+        </h2>
         <div ref={sliderRef} className="keen-slider">
           {testimonials.map((t, i) => (
             <motion.div
               key={i}
-              className="keen-slider__slide bg-background text-foreground p-6 rounded-lg shadow-lg text-left"
+              className="keen-slider__slide bg-background text-foreground border-1 p-6 rounded-lg  shadow-xl shadow-gray-400 text-left"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -120,6 +125,7 @@ export default function TestimonialsSection() {
           ))}
         </div>
       </div>
+      <hr className="mt-16 border-2 border-gray-300" />
     </section>
   );
 }

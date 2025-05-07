@@ -1,4 +1,3 @@
-
 "use client";
 import { motion } from "framer-motion";
 import { Lightbulb, FlaskConical, Cpu } from "lucide-react";
@@ -23,16 +22,14 @@ export default function FeaturesSection() {
   ];
 
   return (
-    <section className="bg-green-300 text-foreground py-20 px-6 mb-20">
+    <section className=" text-foreground mt-16 px-6 ">
       <div className="max-w-7xl mx-auto text-center space-y-12">
-        <motion.h2
-          className="text-3xl font-bold text-primary"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+        <h2
+          className="text-3xl md:text-4xl font-extrabold text-textprimary"
+          style={{ textShadow: "2px 2px 6px  rgba(147, 197, 253, 0.7)" }}
         >
           Why Choose SciLab360?
-        </motion.h2>
+        </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {features.map((f, i) => (
             <motion.div
@@ -43,12 +40,15 @@ export default function FeaturesSection() {
               transition={{ delay: i * 0.2 }}
             >
               <div className="mb-4">{f.icon}</div>
-              <h3 className="text-xl font-semibold text-primary mb-2">{f.title}</h3>
+              <h3 className="text-xl font-semibold text-primary mb-2">
+                {f.title}
+              </h3>
               <p className="text-muted-foreground text-sm">{f.desc}</p>
             </motion.div>
           ))}
         </div>
       </div>
+      <hr className="mt-16 border-2 border-gray-300" />
     </section>
   );
 }

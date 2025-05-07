@@ -2,11 +2,15 @@ import Image from "next/image";
 
 export default function ExploreSection() {
   return (
-    <section className="bg-amber-100 text-foreground py-20 px-6 my-10">
+    <section className=" text-foreground px-6 -mt-16">
       <div className="max-w-7xl mx-auto text-center space-y-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-textprimary">
-          Explore Our Simulations
+        <h2
+          className="text-3xl md:text-4xl font-extrabold text-textprimary"
+          style={{ textShadow: "2px 2px 6px rgba(147, 197, 253, 0.7)" }}
+        >
+         Explore Our Simulations
         </h2>
+
         <p className="text-secondary max-w-2xl mx-auto">
           Dive into interactive experiments across physics, chemistry, and ICT.
         </p>
@@ -41,13 +45,16 @@ export default function ExploreSection() {
                 className="object-cover w-full h-56"
               />
               <div className="p-4 text-left">
-                <h3 className="text-xl font-semibold text-primary">{sim.title}</h3>
+                <h3 className="text-xl font-semibold text-primary">
+                  {sim.title}
+                </h3>
                 <p className="text-secondary text-sm mt-2">{sim.desc}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
+      <hr className="mt-16 border-2 border-gray-300" />
     </section>
   );
 }
