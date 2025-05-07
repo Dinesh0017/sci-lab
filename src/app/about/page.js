@@ -3,9 +3,7 @@ import NavBar from "@/components/NavBar";
 
 export default function AboutPage() {
   return (
-    <main className="flex">
-      <NavBar />
-      <section className="flex-1 pt-6  ml-0 md:ml-54">
+      <section>
         <div className="p-6">
           <h1 className="text-3xl font-bold mb-4 text-gray-800">
             About SciLab360
@@ -23,8 +21,7 @@ export default function AboutPage() {
             speed, responsiveness, and rich interactivity.
           </p>
         </div>
-        <Footer />
       </section>
-    </main>
+
   );
 }

@@ -1,5 +1,8 @@
+// app/layout.js
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,8 +31,14 @@ export default function RootLayout({ children }) {
           style={{ backgroundImage: "url('/assets/images/background.jpg')" }}
         ></div>
 
-        {/* Main content overlayed on top */}
-        <div className="relative z-10">{children}</div>
+        {/* Sidebar */}
+        <NavBar />
+
+        {/* Main content with sidebar offset */}
+        <div className="relative z-10 pt-6 ml-0 md:ml-48">
+          <main>{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

@@ -1,15 +1,18 @@
-import Footer from "@/components/Footer";
-import NavBar from "@/components/NavBar";
+// app/page.js
 import HeroSection from "@/components/HeroSection";
+import ExploreSection from "@/components/ExploreSection";
+import FeaturesSection from "@/components/FeaturesSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+
 
 export default function HomePage() {
   return (
-    <main className="flex">
-      <NavBar />
-      <section className="flex-1 pt-6  ml-0 md:ml-54">
-        <HeroSection />
-        <Footer />
-      </section>
-    </main>
+    <>
+      <HeroSection />
+      <ExploreSection />
+      <FeaturesSection />
+      <TestimonialsSection />
+
+    </>
   );
 }

@@ -3,9 +3,7 @@ import NavBar from "@/components/NavBar";
 
 export default function ChemistryPage() {
   return (
-    <main className="flex">
-      <NavBar />
-      <section className="flex-1 pt-6 ml-0 md:ml-54">
+      <section>
         <div className="p-6">
           <h1 className="text-3xl font-bold mb-4 text-green-800">
             Chemistry Experiments
@@ -15,8 +13,6 @@ export default function ChemistryPage() {
             about periodic elements, acids, and bases.
           </p>
         </div>
-        <Footer />
       </section>
-    </main>
   );
 }
