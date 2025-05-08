@@ -1,18 +1,21 @@
-import Footer from "@/components/Footer";
-import NavBar from "@/components/NavBar";
+import NumberSystemConverter from "@/components/ict_calculators/NumberSystemConverter";
 
 export default function ICTPage() {
   return (
-      <section >
-        <div className="p-6">
-          <h1 className="text-3xl font-bold mb-4 text-purple-800">
-            ICT Experiments
-          </h1>
-          <p className="text-gray-700">
-            Welcome to the ICT Lab! Engage with simulations in networking, data
-            communication, and software systems.
-          </p>
-        </div>
-      </section>
+       <section className="p-6 ml-0 md:ml-54">
+            <h1  className="text-3xl md:text-4xl font-extrabold text-textprimary mb-6"
+                style={{ textShadow: "2px 2px 6px rgba(147, 197, 253, 0.7)" }}>
+              ICT Calculators
+            </h1>
+            <div className="mb-10">
+              <h2 className="text-2xl font-bold mb-4 text-secondary">Number System Converter</h2>
+              <p className="text-lg text-muted-foreground mb-4 text-secondary">
+                Convert between binary, decimal, and hexadecimal number systems.
+              </p>
+              <NumberSystemConverter />
+            </div>
+              
+            
+          </section>
   );
 }
