@@ -1,11 +1,11 @@
 // app/chemistry/page.jsx
-import MolarityCalculator from "@/components/calculators/MolarityCalculator";
-import PHCalculator from "@/components/calculators/PHCalculator";
-import DilutionCalculator from "@/components/calculators/DilutionCalculator";
-import EmpiricalFormulaCalculator from "@/components/calculators/EmpiricalFormulaCalculator";
-import LimitingReactantCalculator from "@/components/calculators/LimitingReactantCalculator";
-import PercentCompositionCalculator from "@/components/calculators/PercentCompositionCalculator";
-import IdealGasCalculator from "@/components/calculators/IdealGasCalculator";
+import MolarityCalculator from "@/components/chemistry_calculators/MolarityCalculator";
+import PHCalculator from "@/components/chemistry_calculators/PHCalculator";
+import DilutionCalculator from "@/components/chemistry_calculators/DilutionCalculator";
+import EmpiricalFormulaCalculator from "@/components/chemistry_calculators/EmpiricalFormulaCalculator";
+import LimitingReactantCalculator from "@/components/chemistry_calculators/LimitingReactantCalculator";
+import PercentCompositionCalculator from "@/components/chemistry_calculators/PercentCompositionCalculator";
+import IdealGasCalculator from "@/components/chemistry_calculators/IdealGasCalculator";
 import React from "react";
 // import other calculators similarly...
 
