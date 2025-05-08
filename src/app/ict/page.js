@@ -1,3 +1,4 @@
+import BitwiseCalculator from "@/components/ict_calculators/BitwiseCalculator";
 import NumberSystemConverter from "@/components/ict_calculators/NumberSystemConverter";
 
 export default function ICTPage() {
@@ -7,6 +8,7 @@ export default function ICTPage() {
                 style={{ textShadow: "2px 2px 6px rgba(147, 197, 253, 0.7)" }}>
               ICT Calculators
             </h1>
+
             <div className="mb-10">
               <h2 className="text-2xl font-bold mb-4 text-secondary">Number System Converter</h2>
               <p className="text-lg text-muted-foreground mb-4 text-secondary">
@@ -14,7 +16,14 @@ export default function ICTPage() {
               </p>
               <NumberSystemConverter />
             </div>
-              
+
+            <div className="mb-10">
+              <h2 className="text-2xl font-bold mb-4 text-secondary">Bitwise Calculator</h2>
+              <p className="text-lg text-muted-foreground mb-4 text-secondary">
+                Perform bitwise operations like AND, OR, XOR, NOT, and shifts.
+              </p>
+              <BitwiseCalculator />
+              </div>
             
           </section>
   );
