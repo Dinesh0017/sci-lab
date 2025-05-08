@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
         <NavBar />
 
         {/* Main content with sidebar offset */}
-        <div className="relative z-10 pt-6 ml-0 md:ml-48">
+        <div className="relative z-10 pt-6 ml-0 md:ml-4 ">
           <main>{children}</main>
           <Footer />
         </div>
