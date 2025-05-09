@@ -64,7 +64,7 @@ export default function NavBar() {
             <Link
               key={idx}
               href={item.path}
-              className="flex items-center gap-3 text-primary hover:text-blue-700 hover:bg-blue-100 px-3 py-2 rounded-lg transition"
+              className="flex items-center gap-3 text-primary hover:text-textprimary  hover:bg-blue-100 px-3 py-2 rounded-lg transition"
             >
               <item.icon className="h-6 w-6" />
               <span className="text-md">{item.name}</span>

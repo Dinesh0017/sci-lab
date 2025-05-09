@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="text-foreground px-6 lg:py-32 -mt-14 ml-10">
+    <section className="text-foreground mb-5 px-6 bg-blue-200/80 py-10 mx-5">
       <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row gap-12 items-center">
         {/* Text Section */}
         <div className="space-y-6 text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
@@ -34,9 +34,9 @@ export default function HeroSection() {
         </div>
 
         {/* 2x2 Image Grid Section */}
-        <div className="grid grid-cols-2 gap-4 w-fit mx-auto">
+        <div className="hidden lg:grid grid-cols-2 gap-6 w-fit ">
           {/* Top-left image */}
-          <div className="w-40 h-40 overflow-hidden rounded-tl-[4rem] shadow-xl hover:scale-105 transition-transform duration-300">
+          <div className="w-60 h-60 overflow-hidden rounded-tl-[5rem] shadow-xl hover:scale-110 transition-transform duration-300">
             <Image
               src="/assets/images/hero1.jpg"
               alt="Person 1"
@@ -47,7 +47,7 @@ export default function HeroSection() {
           </div>
 
           {/* Top-right image */}
-          <div className="w-40 h-40 overflow-hidden shadow-xl hover:scale-105 transition-transform duration-300">
+          <div className="w-60 h-60 overflow-hidden shadow-xl hover:scale-110 transition-transform duration-300">
             <Image
               src="/assets/images/hero2.jpg"
               alt="Person 2"
@@ -58,7 +58,7 @@ export default function HeroSection() {
           </div>
 
           {/* Bottom-left image */}
-          <div className="w-40 h-40 overflow-hidden shadow-xl hover:scale-105 transition-transform duration-300">
+          <div className="w-60 h-60 overflow-hidden shadow-xl hover:scale-110 transition-transform duration-300">
             <Image
               src="/assets/images/hero3.jpg"
               alt="Person 3"
@@ -69,7 +69,7 @@ export default function HeroSection() {
           </div>
 
           {/* Bottom-right image */}
-          <div className="w-40 h-40 overflow-hidden rounded-br-[4rem] shadow-xl hover:scale-105 transition-transform duration-300">
+          <div className="w-60 h-60 overflow-hidden rounded-br-[5rem] shadow-xl hover:scale-110 transition-transform duration-300">
             <Image
               src="/assets/images/hero4.jpg"
               alt="Person 4"
@@ -80,7 +80,7 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-      <hr className="mt-16 border-2 border-gray-300" />
+      <hr className="mt-16 border-2 border-gray-400" />
     </section>
   );
 }

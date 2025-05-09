@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ExploreSection() {
   return (
-    <section className=" text-foreground px-6 -mt-16">
+    <section className="bg-blue-200/80 text-foreground px-6 mb-5 py-8 mx-5">
       <div className="max-w-7xl mx-auto text-center space-y-12">
         <h2
           className="text-3xl md:text-4xl font-extrabold text-textprimary"
@@ -13,6 +13,8 @@ export default function ExploreSection() {
 
         <p className="text-secondary max-w-2xl mx-auto">
           Dive into interactive experiments across physics, chemistry, and ICT.
+          Our simulations provide a hands-on experience, allowing you to
+          conduct experiments, analyze data, and understand complex concepts
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -54,7 +56,7 @@ export default function ExploreSection() {
           ))}
         </div>
       </div>
-      <hr className="mt-16 border-2 border-gray-300" />
+      <hr className="mt-16 border-2 border-gray-400" />
     </section>
   );
 }

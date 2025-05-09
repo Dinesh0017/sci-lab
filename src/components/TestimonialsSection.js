@@ -89,7 +89,7 @@ export default function TestimonialsSection() {
   );
 
   return (
-    <section className=" text-white pt-20 px-6 ">
+    <section className=" text-white px-6 bg-blue-200/80 py-10 mx-5">
       <div className="max-w-6xl mx-auto text-center space-y-12">
         <h2
           className="text-3xl md:text-4xl font-extrabold text-textprimary"
@@ -97,6 +97,11 @@ export default function TestimonialsSection() {
         >
           What Our Users Say
         </h2>
+        <p className="text-secondary max-w-2xl mx-auto">
+          Hear from students, teachers, and parents about their experiences with
+          SciLab360. Our platform has transformed the way science is taught and
+          learned, making it more engaging and effective.
+        </p>
         <div ref={sliderRef} className="keen-slider">
           {testimonials.map((t, i) => (
             <motion.div
@@ -125,7 +130,7 @@ export default function TestimonialsSection() {
           ))}
         </div>
       </div>
-      <hr className="mt-16 border-2 border-gray-300" />
+      <hr className="mt-16 border-2 border-gray-400" />
     </section>
   );
 }

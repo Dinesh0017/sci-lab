@@ -22,7 +22,7 @@ export default function FeaturesSection() {
   ];
 
   return (
-    <section className=" text-foreground mt-16 px-6 ">
+    <section className=" text-foreground mb-5 px-6 bg-blue-200/80 py-10 mx-5 ">
       <div className="max-w-7xl mx-auto text-center space-y-12">
         <h2
           className="text-3xl md:text-4xl font-extrabold text-textprimary"
@@ -30,6 +30,15 @@ export default function FeaturesSection() {
         >
           Why Choose SciLab360?
         </h2>
+        <p className="text-secondary max-w-2xl mx-auto">
+          Our platform is designed to provide an engaging and effective learning
+          experience. Here’s what sets us apart:
+          <br />
+          <br />
+          <span className="font-semibold">
+            Interactive Learning, Real Lab Experience, Smart Simulations 
+          </span>
+        </p>
         <div className="grid md:grid-cols-3 gap-8">
           {features.map((f, i) => (
             <motion.div
@@ -48,7 +57,7 @@ export default function FeaturesSection() {
           ))}
         </div>
       </div>
-      <hr className="mt-16 border-2 border-gray-300" />
+      <hr className="mt-16 border-2 border-gray-400" />
     </section>
   );
 }
