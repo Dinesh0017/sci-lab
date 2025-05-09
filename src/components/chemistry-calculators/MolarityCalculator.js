@@ -15,7 +15,7 @@ export default function MolarityCalculator() {
   };
 
   return (
-    <div className="bg-secondary shadow-md p-6 rounded-lg">
+    <div className="bg-background text-foreground max-w-xl mx-auto p-6 rounded-xl shadow-lg space-y-6">
       <h2 className="text-xl font-bold text-primary mb-4">Molarity Calculator</h2>
       <div className="space-y-4">
         <input

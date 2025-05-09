@@ -11,7 +11,7 @@ export default function IdealGasCalculator() {
   const moles = temperature > 0 ? (pressure * volume) / (R * temperature) : 0;
 
   return (
-    <div className="p-4 bg-background rounded-lg shadow-md">
+    <div className="bg-background text-foreground max-w-xl mx-auto p-6 rounded-xl shadow-lg space-y-6">
       <h3 className="text-xl font-semibold mb-2 text-primary">Ideal Gas Law Calculator</h3>
       <div className="mb-2">
         <label className="block mb-1">Pressure (atm)</label>

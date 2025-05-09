@@ -24,6 +24,9 @@ export default function ChemistryPage() {
         <h2 className="text-2xl font-bold mb-4 text-secondary">
           Molarity Calculator
         </h2>
+        <p className="text-lg text-muted-foreground mb-4 text-secondary">
+          Calculate the concentration of a solution in moles per liter (mol/L) using the amount of solute and volume of solution.
+        </p>
         <MolarityCalculator />
       </div>
 
@@ -32,6 +35,9 @@ export default function ChemistryPage() {
         <h2 className="text-2xl font-bold mb-4 text-secondary">
           pH Calculator
         </h2>
+        <p className="text-lg text-muted-foreground mb-4 text-secondary">
+          Calculate the pH of a solution based on its concentration of hydrogen ions (H+).
+        </p>
         <PHCalculator />
       </div>
 
@@ -40,6 +46,9 @@ export default function ChemistryPage() {
         <h2 className="text-2xl font-bold mb-4 text-secondary">
           Dilution Calculator
         </h2>
+        <p className="text-lg text-muted-foreground mb-4 text-secondary">
+          Calculate the final concentration of a solution after dilution using the initial concentration and volume.
+        </p>
         <DilutionCalculator />
       </div>
 
@@ -48,6 +57,9 @@ export default function ChemistryPage() {
         <h2 className="text-2xl font-bold mb-4 text-secondary">
           Empirical Formula Calculator
         </h2>
+        <p className="text-lg text-muted-foreground mb-4 text-secondary">
+          Determine the empirical formula of a compound based on the mass or percentage composition of its elements.
+        </p>
         <EmpiricalFormulaCalculator />
       </div>
 
@@ -56,6 +68,9 @@ export default function ChemistryPage() {
         <h2 className="text-2xl font-bold mb-4 text-secondary">
           Limiting Reactant Calculator
         </h2>
+        <p className="text-lg text-muted-foreground mb-4 text-secondary">
+          Identify the limiting reactant in a chemical reaction based on the amounts of reactants used.
+        </p>
         <LimitingReactantCalculator />
       </div>
 
@@ -64,6 +79,9 @@ export default function ChemistryPage() {
         <h2 className="text-2xl font-bold mb-4 text-secondary">
           Percent Composition Calculator
         </h2>
+        <p className="text-lg text-muted-foreground mb-4 text-secondary">
+          Calculate the percent composition of each element in a compound based on its molecular formula.
+        </p>
         <PercentCompositionCalculator />
       </div>
 
@@ -72,6 +90,9 @@ export default function ChemistryPage() {
         <h2 className="text-2xl font-bold mb-4 text-secondary">
           Ideal Gas Calculator
         </h2>
+        <p className="text-lg text-muted-foreground mb-4 text-secondary">
+          Calculate the properties of an ideal gas using the ideal gas law (PV = nRT).
+        </p>
         <IdealGasCalculator />
       </div>
     </section>

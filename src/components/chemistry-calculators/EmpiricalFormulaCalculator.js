@@ -18,7 +18,7 @@ export default function EmpiricalFormulaCalculator() {
   };
 
   return (
-    <div className="bg-background text-foreground p-6 rounded-lg shadow-md">
+    <div className="bg-background text-foreground max-w-xl mx-auto p-6 rounded-xl shadow-lg space-y-6">
       <h2 className="text-xl font-semibold mb-4 text-primary">
         Empirical Formula Calculator
       </h2>

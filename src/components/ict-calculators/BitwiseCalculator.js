@@ -21,7 +21,7 @@ export default function BitwiseCalculator() {
   };
 
   return (
-    <div className="bg-secondary p-4 rounded-lg shadow-md max-w-md mx-auto">
+    <div className="bg-background text-foreground max-w-xl mx-auto p-6 rounded-xl shadow-lg space-y-6">
       <h3 className="text-xl font-bold text-primary mb-4">Bitwise Calculator</h3>
       <div className="mb-2">
         <label>Number 1:</label>
@@ -44,7 +44,7 @@ export default function BitwiseCalculator() {
       <div className="mb-2">
         <label>Operation:</label>
         <select
-          className="w-full p-2 border rounded bg-amber-950"
+          className="w-full p-2 border rounded"
           value={operation}
           onChange={(e) => setOperation(e.target.value)}
         >
