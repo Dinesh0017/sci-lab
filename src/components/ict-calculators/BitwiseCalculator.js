@@ -44,7 +44,7 @@ export default function BitwiseCalculator() {
       <div className="mb-2">
         <label>Operation:</label>
         <select
-          className="w-full p-2 border rounded"
+          className="w-full p-2 border rounded bg-amber-950"
           value={operation}
           onChange={(e) => setOperation(e.target.value)}
         >

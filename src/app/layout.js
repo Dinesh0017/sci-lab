@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
       >
         {/* Background image layer */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat z-[-1] opacity-20"
+          className="fixed top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-20 -z-10"
           style={{ backgroundImage: "url('/assets/images/background.jpg')" }}
         ></div>
 
@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
         <NavBar />
 
         {/* Main content with sidebar offset */}
-        <div className="relative z-10 pt-6 ml-0 md:ml-4 ">
+        <div className="relative z-10 pt-6 ml-0 md:ml-44 ">
           <main>{children}</main>
           <Footer />
         </div>
