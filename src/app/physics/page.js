@@ -4,6 +4,8 @@ import ForceCalculator from "@/components/physics-calculators/ForceCalculator";
 import KineticEnergyCalculator from "@/components/physics-calculators/KineticEnergyCalculator";
 import PotentialEnergyCalculator from "@/components/physics-calculators/PotentialEnergyCalculator";
 import WorkCalculator from "@/components/physics-calculators/WorkCalculator";
+import OhmsLawCalculator from "@/components/physics-calculators/OhmsLawCalculator";
+import React from "react";
 
 export default function PhysicsPage() {
   return (
@@ -76,6 +78,18 @@ export default function PhysicsPage() {
           <span className="text-black font-semibold">W = F × d</span>.
         </p>
         <WorkCalculator />
+      </div>
+
+      {/* --Ohms Law Calculator -- */}
+      <div className="bg-blue-200/80 p-10 rounded-2xl mb-10">
+        <h2 className="text-2xl font-bold mb-4 text-secondary">
+          Ohm's Law Calculator
+        </h2>
+        <p className="text-lg text-muted-foreground mb-4 text-secondary">
+          Calculate voltage, current, or resistance using the formula:{" "}
+          <span className="text-black font-semibold">V = I × R</span>.
+        </p>
+        <OhmsLawCalculator />
       </div>
     </section>
   );
