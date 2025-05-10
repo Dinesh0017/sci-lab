@@ -22,7 +22,7 @@ export default function ICTPage() {
           <p className="text-lg text-muted-foreground mb-4 text-secondary">
             Convert between{" "}
             <span className="text-black font-semibold">binary</span>,{" "}
-            <sapn className="text-black font-semibold">decimal</sapn>,
+            <sapn className="text-black font-semibold">decimal</sapn>,{" "}
             <sapn className="text-black font-semibold">octal</sapn> and{" "}
             <span className="text-black font-semibold">hexadecimal</span> number
             systems.

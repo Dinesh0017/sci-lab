@@ -95,6 +95,7 @@ export default function ChemistryPage() {
         </p>
         <IdealGasCalculator />
       </div>
+      
     </section>
   );
 }
