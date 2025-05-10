@@ -17,7 +17,7 @@ export default function PhysicsPage() {
             Speed · Distance · Time Calculator
           </h2>
           <p className="text-lg text-muted-foreground mb-4 text-secondary">
-            Calculate speed, distance, or time using the formula: speed = distance/time.
+            Calculate speed, distance, or time using the formula: <span className="text-black font-semibold">speed = distance/time</span>.
           </p>
           <SpeedDistanceTimeCalculator />
         </div>
@@ -26,10 +26,10 @@ export default function PhysicsPage() {
       <div className="mb-10">
         <div className="bg-blue-200/80 p-10 rounded-2xl">
           <h2 className="text-2xl font-bold mb-4 text-secondary">
-            Force Calculator (F = m × a)
+            Force Calculator
           </h2>
           <p className="text-lg text-muted-foreground mb-4 text-secondary">
-            Calculate force using the formula: F = m × a.
+            Calculate force using the formula:<span className="text-black font-semibold">F = m × a</span> .
           </p>
           <ForceCalculator />
         </div>
