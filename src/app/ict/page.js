@@ -1,6 +1,8 @@
 import BitwiseCalculator from "@/components/ict-calculators/BitwiseCalculator";
+import DataRateConverter from "@/components/ict-calculators/DataRateConverter";
 import NumberSystemConverter from "@/components/ict-calculators/NumberSystemConverter";
 import SubnetCalculator from "@/components/ict-calculators/SubnetCalculator";
+import PingTimeCalculator from "@/components/ict-calculators/PingTimeCalculator";
 
 export default function ICTPage() {
   return (
@@ -47,6 +49,31 @@ export default function ICTPage() {
       <SubnetCalculator />
     </div>
   </div>
+
+  <div className="mb-10">
+    <div className="bg-blue-200/80 p-10 rounded-2xl">
+      <h2 className="text-2xl font-bold mb-4 text-secondary">
+        Data Rate Converter
+      </h2>
+      <p className="text-lg text-muted-foreground mb-4 text-secondary">
+        Convert between different data rates (bps, Kbps, Mbps, Gbps).
+      </p>
+      <DataRateConverter />
+    </div>
+  </div>
+
+  <div className="mb-10">
+    <div className="bg-blue-200/80 p-10 rounded-2xl">
+      <h2 className="text-2xl font-bold mb-4 text-secondary">
+        Ping Time Calculator
+      </h2>
+      <p className="text-lg text-muted-foreground mb-4 text-secondary">
+        Estimate ping time based on packet size and bandwidth.
+      </p>
+      <PingTimeCalculator />
+    </div>
+  </div>
+
 </section>
 
   );
