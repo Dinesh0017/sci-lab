@@ -21,7 +21,7 @@ export default function ChemistryPage() {
 
       {/* -- Molarity Calculator -- */}
       <div className="bg-blue-200/80 p-10 rounded-2xl mb-10">
-        <h2 className="text-2xl font-bold mb-4 text-secondary">
+        <h2 className="text-2xl font-bold mb-4 text-foreground">
           Molarity Calculator
         </h2>
         <p className="text-lg text-muted-foreground mb-4 text-secondary">
@@ -32,7 +32,7 @@ export default function ChemistryPage() {
 
       {/* -- pH Calculator -- */}
       <div className="bg-blue-200/80 p-10 rounded-2xl mb-10">
-        <h2 className="text-2xl font-bold mb-4 text-secondary">
+        <h2 className="text-2xl font-bold mb-4 text-foreground">
           pH Calculator
         </h2>
         <p className="text-lg text-muted-foreground mb-4 text-secondary">
@@ -43,7 +43,7 @@ export default function ChemistryPage() {
 
       {/* -- Dilution Calculator -- */}
       <div className="bg-blue-200/80 p-10 rounded-2xl mb-10">
-        <h2 className="text-2xl font-bold mb-4 text-secondary">
+        <h2 className="text-2xl font-bold mb-4 text-foreground">
           Dilution Calculator
         </h2>
         <p className="text-lg text-muted-foreground mb-4 text-secondary">
@@ -54,7 +54,7 @@ export default function ChemistryPage() {
 
       {/* -- Empirical Formula Calculator -- */}
       <div className="bg-blue-200/80 p-10 rounded-2xl mb-10">
-        <h2 className="text-2xl font-bold mb-4 text-secondary">
+        <h2 className="text-2xl font-bold mb-4 text-foreground">
           Empirical Formula Calculator
         </h2>
         <p className="text-lg text-muted-foreground mb-4 text-secondary">
@@ -65,7 +65,7 @@ export default function ChemistryPage() {
 
       {/* -- Limiting Reactant Calculator -- */}
       <div className="bg-blue-200/80 p-10 rounded-2xl mb-10">
-        <h2 className="text-2xl font-bold mb-4 text-secondary">
+        <h2 className="text-2xl font-bold mb-4 text-foreground">
           Limiting Reactant Calculator
         </h2>
         <p className="text-lg text-muted-foreground mb-4 text-secondary">
@@ -76,7 +76,7 @@ export default function ChemistryPage() {
 
       {/* -- Percent Composition Calculator -- */}
       <div className="bg-blue-200/80 p-10 rounded-2xl mb-10">
-        <h2 className="text-2xl font-bold mb-4 text-secondary">
+        <h2 className="text-2xl font-bold mb-4 text-foreground">
           Percent Composition Calculator
         </h2>
         <p className="text-lg text-muted-foreground mb-4 text-secondary">
@@ -87,7 +87,7 @@ export default function ChemistryPage() {
 
       {/* -- Ideal Gas Calculator -- */}
       <div className="bg-blue-200/80 p-10 rounded-2xl mb-10">
-        <h2 className="text-2xl font-bold mb-4 text-secondary">
+        <h2 className="text-2xl font-bold mb-4 text-foreground">
           Ideal Gas Calculator
         </h2>
         <p className="text-lg text-muted-foreground mb-4 text-secondary">

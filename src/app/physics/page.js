@@ -19,7 +19,7 @@ export default function PhysicsPage() {
 
       {/* -- Potential Energy Calculator -- */}
       <div className="bg-blue-200/80 p-10 rounded-2xl mb-10">
-        <h2 className="text-2xl font-bold mb-4 text-secondary">
+        <h2 className="text-2xl font-bold mb-4 text-foreground">
           Speed · Distance · Time Calculator
         </h2>
         <p className="text-lg text-muted-foreground mb-4 text-secondary">
@@ -34,7 +34,7 @@ export default function PhysicsPage() {
 
       {/* -- Force Calculator -- */}
       <div className="bg-blue-200/80 p-10 rounded-2xl mb-10">
-        <h2 className="text-2xl font-bold mb-4 text-secondary">
+        <h2 className="text-2xl font-bold mb-4 text-foreground">
           Force Calculator
         </h2>
         <p className="text-lg text-muted-foreground mb-4 text-secondary">
@@ -46,7 +46,7 @@ export default function PhysicsPage() {
 
       {/* -- Kinetic Energy Calculator -- */}
       <div className="bg-blue-200/80 p-10 rounded-2xl mb-10">
-        <h2 className="text-2xl font-bold mb-4 text-secondary">
+        <h2 className="text-2xl font-bold mb-4 text-foreground">
           Kinetic Energy Calculator
         </h2>
         <p className="text-lg text-muted-foreground mb-4 text-secondary">
@@ -58,7 +58,7 @@ export default function PhysicsPage() {
 
       {/* -- Potential Energy Calculator -- */}
       <div className="bg-blue-200/80 p-10 rounded-2xl mb-10">
-        <h2 className="text-2xl font-bold mb-4 text-secondary">
+        <h2 className="text-2xl font-bold mb-4 text-foreground">
           Potential Energy Calculator
         </h2>
         <p className="text-lg text-muted-foreground mb-4 text-secondary">
@@ -70,7 +70,7 @@ export default function PhysicsPage() {
 
       {/* -- Work Calculator -- */}
       <div className="bg-blue-200/80 p-10 rounded-2xl mb-10">
-        <h2 className="text-2xl font-bold mb-4 text-secondary">
+        <h2 className="text-2xl font-bold mb-4 text-foreground">
           Work Calculator
         </h2>
         <p className="text-lg text-muted-foreground mb-4 text-secondary">
@@ -82,7 +82,7 @@ export default function PhysicsPage() {
 
       {/* --Ohms Law Calculator -- */}
       <div className="bg-blue-200/80 p-10 rounded-2xl mb-10">
-        <h2 className="text-2xl font-bold mb-4 text-secondary">
+        <h2 className="text-2xl font-bold mb-4 text-foreground">
           Ohm's Law Calculator
         </h2>
         <p className="text-lg text-muted-foreground mb-4 text-secondary">

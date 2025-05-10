@@ -16,7 +16,7 @@ export default function ICTPage() {
 
       <div className="mb-10">
         <div className="bg-blue-200/80 p-10 rounded-2xl">
-          <h2 className="text-2xl font-bold mb-4 text-secondary">
+          <h2 className="text-2xl font-bold mb-4 text-foreground">
             Number System Converter
           </h2>
           <p className="text-lg text-muted-foreground mb-4 text-secondary">
@@ -33,7 +33,7 @@ export default function ICTPage() {
 
       <div className="mb-10">
         <div className="bg-blue-200/80 p-10 rounded-2xl">
-          <h2 className="text-2xl font-bold mb-4 text-secondary">
+          <h2 className="text-2xl font-bold mb-4 text-foreground">
             Bitwise Calculator
           </h2>
           <p className="text-lg text-muted-foreground mb-4 text-secondary">
@@ -50,7 +50,7 @@ export default function ICTPage() {
 
       <div className="mb-10">
         <div className="bg-blue-200/80 p-10 rounded-2xl">
-          <h2 className="text-2xl font-bold mb-4 text-secondary">
+          <h2 className="text-2xl font-bold mb-4 text-foreground">
             Subnet Calculator
           </h2>
           <p className="text-lg text-muted-foreground mb-4 text-secondary">
@@ -62,7 +62,7 @@ export default function ICTPage() {
 
       <div className="mb-10">
         <div className="bg-blue-200/80 p-10 rounded-2xl">
-          <h2 className="text-2xl font-bold mb-4 text-secondary">
+          <h2 className="text-2xl font-bold mb-4 text-foreground">
             Data Rate Converter
           </h2>
           <p className="text-lg text-muted-foreground mb-4 text-secondary">
@@ -74,7 +74,7 @@ export default function ICTPage() {
 
       <div className="mb-10">
         <div className="bg-blue-200/80 p-10 rounded-2xl">
-          <h2 className="text-2xl font-bold mb-4 text-secondary">
+          <h2 className="text-2xl font-bold mb-4 text-foreground">
             Ping Time Calculator
           </h2>
           <p className="text-lg text-muted-foreground mb-4 text-secondary">
