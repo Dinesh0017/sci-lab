@@ -9,11 +9,11 @@ export default function OhmsLawCalculator() {
   const [result, setResult] = useState({});
 
   const calculate = () => {
-    let V = parseFloat(voltage);
-    let I = parseFloat(current);
-    let R = parseFloat(resistance);
+    const V = parseFloat(voltage);
+    const I = parseFloat(current);
+    const R = parseFloat(resistance);
 
-    let results = {};
+    const results = {};
 
     if (!isNaN(V) && !isNaN(I)) {
       results.Resistance = `${(V / I).toFixed(3)} Ω`;
@@ -22,7 +22,7 @@ export default function OhmsLawCalculator() {
     } else if (!isNaN(I) && !isNaN(R)) {
       results.Voltage = `${(I * R).toFixed(3)} V`;
     } else {
-      results = { Error: "Please fill in any two values to calculate the third." };
+      results.Error = "Please provide any two values to calculate the third.";
     }
 
     setResult(results);
@@ -30,9 +30,9 @@ export default function OhmsLawCalculator() {
 
   return (
     <div className="bg-background text-foreground max-w-xl mx-auto p-6 rounded-xl shadow-lg space-y-6">
-      <h2 className="text-2xl font-bold mb-4 text-primary">Ohm's Law Calculator</h2>
+      <h2 className="text-2xl font-bold text-primary">Ohm's Law Calculator</h2>
 
-      <div className="mb-4">
+      <div>
         <label className="block font-medium mb-1">Voltage (V):</label>
         <input
           type="number"
@@ -43,7 +43,7 @@ export default function OhmsLawCalculator() {
         />
       </div>
 
-      <div className="mb-4">
+      <div>
         <label className="block font-medium mb-1">Current (I):</label>
         <input
           type="number"
@@ -54,7 +54,7 @@ export default function OhmsLawCalculator() {
         />
       </div>
 
-      <div className="mb-4">
+      <div>
         <label className="block font-medium mb-1">Resistance (R):</label>
         <input
           type="number"
@@ -67,7 +67,7 @@ export default function OhmsLawCalculator() {
 
       <button
         onClick={calculate}
-        className="bg-primary text-white px-4 py-2 rounded hover:bg-blue-700"
+        className="bg-primary text-white px-4 py-2 rounded hover:bg-blue-700 transition"
       >
         Calculate
       </button>
@@ -75,7 +75,9 @@ export default function OhmsLawCalculator() {
       {Object.keys(result).length > 0 && (
         <div className="text-lg font-semibold space-y-2">
           {Object.entries(result).map(([label, value]) => (
-            <p key={label}>{label}: <span className="text-primary">{value}</span></p>
+            <p key={label}>
+              {label}: <span className="text-primary">{value}</span>
+            </p>
           ))}
         </div>
       )}
