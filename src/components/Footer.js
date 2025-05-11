@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 export default function Footer() {
+  const year = new Date().getFullYear();
   return (
     <footer className="bg-primary text-textprimary py-10 px-6 mt-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
@@ -83,7 +84,7 @@ export default function Footer() {
       </div>
 
       <div className="text-center mt-10 text-sm text-gray-400">
-        &copy; {new Date().getFullYear()} SciLab360. All rights reserved.
+        &copy; {year} SciLab360. All rights reserved.
       </div>
     </footer>
   );
