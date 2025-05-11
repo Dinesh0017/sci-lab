@@ -44,28 +44,28 @@ const testimonials = [
     name: "Anjali Silva",
     role: "A/L Student",
     quote:
-      "SciLab360 made science easier to understand. The simulations are just like being in a real lab!",
+      "&quot;SciLab360 made science easier to understand. The simulations are just like being in a real lab!&quot;",
     image: "/assets/images/girl.jpeg",
   },
   {
     name: "Mr. Perera",
     role: "Science Teacher",
     quote:
-      "My students are more engaged and perform better in practicals thanks to SciLab360.",
+      "&quot;My students are more engaged and perform better in practicals thanks to SciLab360.&quot;",
     image: "/assets/images/girl.jpeg",
   },
   {
     name: "Nadeesha Kumarasinghe",
     role: "Lab Instructor",
     quote:
-      "This platform is a game-changer for practical science education in Sri Lanka.",
+      "&quot;This platform is a game-changer for practical science education in Sri Lanka.&quot;",
     image: "/assets/images/girl.jpeg",
   },
   {
     name: "Ruwan Fernando",
     role: "Parent",
     quote:
-      "My daughter loves using SciLab360. She's learning with excitement and ease!",
+      "&quot;My daughter loves using SciLab360. She&rsquo;s learning with excitement and ease!&quot;",
     image: "/assets/images/girl.jpeg",
   },
 ];
