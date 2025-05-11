@@ -84,7 +84,7 @@ export default function Footer() {
       </div>
 
       <div className="text-center mt-10 text-sm text-gray-400">
-        &copy; {year} SciLab360. All rights reserved.
+        {"© "}{year} SciLab360. All rights reserved.
       </div>
     </footer>
   );
