@@ -28,7 +28,7 @@ export default function NavBar() {
   return (
     <>
       {/* Mobile Menu Toggle */}
-      <div className="md:hidden fixed top-4 left-4 z-50">
+      <div className="md:hidden fixed top-4 left-4 z-50 sm:hidden">
         <button
           onClick={() => setOpen(!open)}
           className="bg-primary p-2 rounded-md text-white"
