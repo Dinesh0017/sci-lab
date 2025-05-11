@@ -5,7 +5,6 @@ import "keen-slider/keen-slider.min.css";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-
 // Autoplay plugin
 function AutoPlayPlugin(slider) {
   let timeout;
@@ -20,7 +19,7 @@ function AutoPlayPlugin(slider) {
     if (mouseOver) return;
     timeout = setTimeout(() => {
       slider.next();
-    }, 3000); // Changed to 3s to match comment
+    }, 3000);
   }
 
   slider.on("created", () => {
@@ -69,7 +68,6 @@ const testimonials = [
     image: "/assets/images/girl.jpeg",
   },
 ];
-
 
 export default function TestimonialsSection() {
   const [sliderRef] = useKeenSlider(
@@ -126,7 +124,10 @@ export default function TestimonialsSection() {
                   <p className="text-sm text-secondary">{t.role}</p>
                 </div>
               </div>
-              <p className="text-sm italic">"{t.quote}"</p>
+              <p
+                className="text-sm italic"
+                dangerouslySetInnerHTML={{ __html: t.quote }}
+              ></p>
             </motion.div>
           ))}
         </div>
