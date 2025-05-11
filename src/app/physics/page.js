@@ -5,6 +5,7 @@ import KineticEnergyCalculator from "@/components/physics-calculators/KineticEne
 import PotentialEnergyCalculator from "@/components/physics-calculators/PotentialEnergyCalculator";
 import WorkCalculator from "@/components/physics-calculators/WorkCalculator";
 import OhmsLawCalculator from "@/components/physics-calculators/OhmsLawCalculator";
+import MomentumCalculator from "@/components/physics-calculators/MomentumCalculator";
 import React from "react";
 
 export default function PhysicsPage() {
@@ -90,6 +91,18 @@ export default function PhysicsPage() {
           <span className="text-black font-semibold">V = I × R</span>.
         </p>
         <OhmsLawCalculator />
+      </div>
+
+      {/* --Momentum Calculator -- */}
+      <div className="bg-blue-200/80 p-10 rounded-2xl mb-10">
+        <h2 className="text-2xl font-bold mb-4 text-foreground">
+          Momentum Calculator
+        </h2>
+        <p className="text-lg text-muted-foreground mb-4 text-secondary">
+          Calculate momentum using the formula:{" "}
+          <span className="text-black font-semibold">p = m × v</span>.
+        </p>
+        <MomentumCalculator />
       </div>
     </section>
   );
