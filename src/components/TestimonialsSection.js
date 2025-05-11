@@ -65,7 +65,7 @@ const testimonials = [
     name: "Ruwan Fernando",
     role: "Parent",
     quote:
-      "My daughter loves using SciLab360. She’s learning with excitement and ease!",
+      "My daughter loves using SciLab360. She&rsquo;s learning with excitement and ease!",
     image: "/assets/images/girl.jpeg",
   },
 ];

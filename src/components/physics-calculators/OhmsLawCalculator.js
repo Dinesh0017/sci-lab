@@ -30,7 +30,7 @@ export default function OhmsLawCalculator() {
 
   return (
     <div className="bg-background text-foreground max-w-xl mx-auto p-6 rounded-xl shadow-lg space-y-6">
-      <h2 className="text-2xl font-bold text-primary">Ohm's Law Calculator</h2>
+      <h2 className="text-2xl font-bold text-primary">Ohm&apos;s Law Calculator</h2>
 
       <div>
         <label className="block font-medium mb-1">Voltage (V):</label>
