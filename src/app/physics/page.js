@@ -84,7 +84,7 @@ export default function PhysicsPage() {
       {/* --Ohms Law Calculator -- */}
       <div className="bg-blue-200/80 p-10 rounded-2xl mb-10">
         <h2 className="text-2xl font-bold mb-4 text-foreground">
-          Ohm's Law Calculator
+          Ohm&apos;s Law Calculator
         </h2>
         <p className="text-lg text-muted-foreground mb-4 text-secondary">
           Calculate voltage, current, or resistance using the formula:{" "}

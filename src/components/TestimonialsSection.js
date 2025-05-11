@@ -4,7 +4,7 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+
 
 // Autoplay plugin
 function AutoPlayPlugin(slider) {
@@ -65,10 +65,11 @@ const testimonials = [
     name: "Ruwan Fernando",
     role: "Parent",
     quote:
-      "My daughter loves using SciLab360. She&rsquo;s learning with excitement and ease!",
+      "My daughter loves using SciLab360. She's learning with excitement and ease!",
     image: "/assets/images/girl.jpeg",
   },
 ];
+
 
 export default function TestimonialsSection() {
   const [sliderRef] = useKeenSlider(

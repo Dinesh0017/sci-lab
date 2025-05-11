@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -25,24 +26,24 @@ export default function Footer() {
           <h3 className="font-semibold mb-3 ">Quick Links</h3>
           <ul className="space-y-2 text-secondary">
             <li>
-              <a href="/" className="hover:text-texthover transition">
+              <Link href="/" className="hover:text-texthover transition">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/physics" className="hover:text-texthover transition">
+              <Link href="/physics" className="hover:text-texthover transition">
                 Physics
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/chemistry" className="hover:text-texthover transition">
+              <Link href="/chemistry" className="hover:text-texthover transition">
                 Chemistry
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/ict" className="hover:text-texthover transition">
+              <Link href="/ict" className="hover:text-texthover transition">
                 ICT
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -51,19 +52,19 @@ export default function Footer() {
           <h3 className="font-semibold mb-3">Resources</h3>
           <ul className="space-y-2 text-secondary">
             <li>
-              <a href="#" className="hover:text-white transition">
+              <Link href="#" className="hover:text-white transition">
                 Blog
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-white transition">
+              <Link href="#" className="hover:text-white transition">
                 Docs
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-white transition">
+              <Link href="#" className="hover:text-white transition">
                 Tutorials
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
