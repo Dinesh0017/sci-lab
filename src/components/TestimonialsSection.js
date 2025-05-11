@@ -4,7 +4,7 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useRef, useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 // Autoplay plugin
 function AutoPlayPlugin(slider) {
@@ -20,7 +20,7 @@ function AutoPlayPlugin(slider) {
     if (mouseOver) return;
     timeout = setTimeout(() => {
       slider.next();
-    }, 2000); // 3 seconds delay
+    }, 3000); // Changed to 3s to match comment
   }
 
   slider.on("created", () => {
@@ -85,11 +85,11 @@ export default function TestimonialsSection() {
         },
       },
     },
-    [AutoPlayPlugin] // 👈 Add autoplay plugin
+    [AutoPlayPlugin]
   );
 
   return (
-    <section className=" text-white px-6 bg-blue-200/80 py-10 mx-5">
+    <section className="text-white px-6 bg-blue-200/80 py-10 mx-5">
       <div className="max-w-6xl mx-auto text-center space-y-12">
         <h2
           className="text-3xl md:text-4xl font-extrabold text-textprimary"
@@ -106,7 +106,7 @@ export default function TestimonialsSection() {
           {testimonials.map((t, i) => (
             <motion.div
               key={i}
-              className="keen-slider__slide bg-background text-foreground border-1 p-6 rounded-lg  shadow-xl shadow-gray-400 text-left"
+              className="keen-slider__slide bg-background text-foreground border p-6 rounded-lg shadow-xl shadow-gray-400 text-left"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -118,7 +118,7 @@ export default function TestimonialsSection() {
                   alt={t.name}
                   width={50}
                   height={50}
-                  className="rounded-full"
+                  className="rounded-full object-cover"
                 />
                 <div>
                   <p className="font-semibold text-primary">{t.name}</p>
