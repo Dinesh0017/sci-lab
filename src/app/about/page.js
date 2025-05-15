@@ -97,7 +97,7 @@ export default function AboutPage() {
           </p>
           <a
             href="/contact"
-            className="inline-block mt-2 px-6 py-3 bg-white text-primary font-semibold rounded-lg shadow hover:bg-gray-100 transition"
+            className="inline-block mt-2 px-6 py-3 bg-white text-primary font-bold rounded-lg shadow hover:bg-gray-100 transition"
           >
             Contact Us
           </a>
