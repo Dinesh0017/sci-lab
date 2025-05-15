@@ -22,7 +22,7 @@ export default function AboutPage() {
         {/* Our Mission */}
         <div className="grid md:grid-cols-2 gap-10 items-center bg-blue-200/80 p-10 rounded-2xl">
           <div>
-            <h2 className="text-3xl font-bold text-primary mb-4">
+            <h2 className="text-6xl font-bold text-primary mb-4 -mt-8">
               Our Mission
             </h2>
             <p className="text-muted text-lg">
@@ -50,7 +50,7 @@ export default function AboutPage() {
             height={300}
           />
           <div>
-            <h2 className="text-3xl font-bold text-primary mb-4">Who We Are</h2>
+            <h2 className="text-6xl font-bold text-primary mb-4">Who We Are</h2>
             <p className="text-muted text-lg">
               We're a team of passionate educators, developers, and scientists
               based in Sri Lanka dedicated to transforming the way science is
@@ -89,9 +89,9 @@ export default function AboutPage() {
         </div>
 
         {/* Call to Action */}
-        <div className="bg-gradient-to-r from-primary to-accent text-white rounded-2xl shadow-2xl p-12 text-center space-y-6">
+        <div className="bg-gradient-to-r from-blue-200/80 to-accent text-primary rounded-2xl shadow-2xl p-12 text-center space-y-6">
           <h3 className="text-3xl font-bold">Join the SciLab360 Movement</h3>
-          <p className="text-white/90 max-w-2xl mx-auto text-lg">
+          <p className="text-primary max-w-2xl mx-auto text-lg">
             Whether you're a student, teacher, or parent — together we can make
             science education better for the next generation.
           </p>
