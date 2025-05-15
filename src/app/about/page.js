@@ -2,17 +2,18 @@ import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <section className=" text-foreground px-6 py-16 min-h-screen  m-5">
-      <div className="max-w-6xl mx-auto space-y-20  ">
+    <section className="text-foreground px-4 sm:px-6 py-16 min-h-screen">
+      <div className="max-w-6xl mx-auto space-y-20">
+
         {/* Header */}
-        <div className="text-center space-y-4 bg-blue-200/80 p-10 rounded-2xl">
+        <div className="text-center space-y-4 bg-blue-200/80 p-6 sm:p-10 ">
           <h1
-            className="text-3xl md:text-4xl font-extrabold text-textprimary mb-6"
+            className="text-3xl md:text-4xl font-extrabold text-textprimary mb-4"
             style={{ textShadow: "2px 2px 6px rgba(147, 197, 253, 0.7)" }}
           >
             About SciLab360
           </h1>
-          <p className="text-secondary max-w-3xl mx-auto text-lg">
+          <p className="text-secondary max-w-3xl mx-auto text-base md:text-lg">
             SciLab360 is a cutting-edge virtual science lab platform designed to
             revolutionize the way students experience practical science
             education.
@@ -20,38 +21,44 @@ export default function AboutPage() {
         </div>
 
         {/* Our Mission */}
-        <div className="grid md:grid-cols-2 gap-10 items-center bg-blue-200/80 p-10 rounded-2xl">
+        <div className="grid md:grid-cols-2 gap-8 items-center bg-blue-200/80 p-6 sm:p-10 ">
           <div>
-            <h2 className="text-6xl font-bold text-primary mb-4 -mt-8">
+            <h2 className="text-4xl sm:text-5xl font-bold text-primary mb-4">
               Our Mission
             </h2>
-            <p className="text-muted text-lg">
+            <p className="text-muted text-base md:text-lg">
               To provide accessible, engaging, and interactive science
               simulations that empower students, support teachers, and spark
               curiosity across all educational levels.
             </p>
           </div>
-          <Image
-            src="/assets/images/lab1.jpeg"
-            alt="Our Mission"
-            className="rounded-2xl shadow-lg  object-cover ml-32"
-            width={300}
-            height={300}
-          />
+          <div className="flex justify-center">
+            <Image
+              src="/assets/images/lab1.jpeg"
+              alt="Our Mission"
+              className="rounded-2xl shadow-lg w-full max-w-sm object-cover"
+              width={300}
+              height={300}
+            />
+          </div>
         </div>
 
         {/* Who We Are */}
-        <div className="grid md:grid-cols-2 gap-10 items-center bg-blue-200/80 p-10 rounded-2xl">
-          <Image
-            src="/assets/images/lab2.jpeg"
-            alt="Our Team"
-            className="rounded-2xl shadow-lg object-cover"
-            width={300}
-            height={300}
-          />
+        <div className="grid md:grid-cols-2 gap-8 items-center bg-blue-200/80 p-6 sm:p-10 ">
+          <div className="flex justify-center order-1 md:order-none">
+            <Image
+              src="/assets/images/lab2.jpeg"
+              alt="Our Team"
+              className="rounded-2xl shadow-lg w-full max-w-sm object-cover"
+              width={300}
+              height={300}
+            />
+          </div>
           <div>
-            <h2 className="text-6xl font-bold text-primary mb-4">Who We Are</h2>
-            <p className="text-muted text-lg">
+            <h2 className="text-4xl sm:text-5xl font-bold text-primary mb-4">
+              Who We Are
+            </h2>
+            <p className="text-muted text-base md:text-lg">
               We&apos;re a team of passionate educators, developers, and scientists
               based in Sri Lanka dedicated to transforming the way science is
               taught. Our goal is to make learning science more hands-on,
@@ -61,7 +68,7 @@ export default function AboutPage() {
         </div>
 
         {/* Core Values */}
-        <div className="grid md:grid-cols-3 gap-8 text-center">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-center">
           {[
             {
               title: "Innovation",
@@ -89,9 +96,11 @@ export default function AboutPage() {
         </div>
 
         {/* Call to Action */}
-        <div className="bg-gradient-to-r from-blue-200/80 to-accent text-primary rounded-2xl shadow-2xl p-12 text-center space-y-6">
-          <h3 className="text-3xl font-bold">Join the SciLab360 Movement</h3>
-          <p className="text-primary max-w-2xl mx-auto text-lg">
+        <div className="bg-gradient-to-r from-blue-200/80 to-accent text-primary shadow-2xl p-10 sm:p-12 text-center space-y-6">
+          <h3 className="text-2xl sm:text-3xl font-bold">
+            Join the SciLab360 Movement
+          </h3>
+          <p className="text-primary max-w-2xl mx-auto text-base md:text-lg">
             Whether you&apos;re a student, teacher, or parent — together we can make
             science education better for the next generation.
           </p>
