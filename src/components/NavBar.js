@@ -1,7 +1,6 @@
 "use client";
 
-// components/Sidebar.js
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   HomeIcon,
   BeakerIcon,
@@ -24,10 +23,27 @@ const navItems = [
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile screen size
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize(); // Set initially
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Close sidebar on mobile when a link is clicked
+  const handleLinkClick = () => {
+    if (isMobile) setOpen(false);
+  };
 
   return (
     <>
-      {/* Mobile Menu Toggle (only visible on mobile) */}
+      {/* Mobile Menu Toggle Button */}
       <div className="md:hidden fixed top-4 left-4 z-50">
         <button
           onClick={() => setOpen(!open)}
@@ -47,7 +63,7 @@ export default function NavBar() {
           open ? "translate-x-0" : "-translate-x-full"
         } md:translate-x-0`}
       >
-        {/* Logo Section */}
+        {/* Logo */}
         <div className="flex items-center justify-center border-b-4">
           <Image
             src="/assets/images/SciLab.png"
@@ -58,12 +74,13 @@ export default function NavBar() {
           />
         </div>
 
-        {/* Nav Items */}
+        {/* Navigation */}
         <nav className="flex flex-col gap-4 p-6">
           {navItems.map((item, idx) => (
             <Link
               key={idx}
               href={item.path}
+              onClick={handleLinkClick}
               className="flex items-center gap-3 text-primary hover:text-textprimary hover:bg-blue-100 px-3 py-2 rounded-lg transition"
             >
               <item.icon className="h-6 w-6" />
