@@ -27,8 +27,8 @@ export default function NavBar() {
 
   return (
     <>
-      {/* Mobile Menu Toggle */}
-      <div className="md:hidden fixed top-4 left-4 z-50 ">
+      {/* Mobile Menu Toggle (only visible on mobile) */}
+      <div className="md:hidden fixed top-4 left-4 z-50">
         <button
           onClick={() => setOpen(!open)}
           className="bg-primary p-2 rounded-md text-white"
@@ -43,9 +43,9 @@ export default function NavBar() {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full w-48 bg-white border-r shadow-lg z-40 transform ${
+        className={`fixed top-0 left-0 h-full w-48 bg-white border-r shadow-lg z-40 transform transition-transform duration-300 ease-in-out ${
           open ? "translate-x-0" : "-translate-x-full"
-        } md:translate-x-0 transition-transform duration-300 ease-in-out`}
+        } md:translate-x-0`}
       >
         {/* Logo Section */}
         <div className="flex items-center justify-center border-b-4">
@@ -54,7 +54,7 @@ export default function NavBar() {
             alt="Logo"
             width={350}
             height={350}
-            className=" rounded-full -m-10"
+            className="rounded-full -m-10"
           />
         </div>
 
@@ -64,7 +64,7 @@ export default function NavBar() {
             <Link
               key={idx}
               href={item.path}
-              className="flex items-center gap-3 text-primary hover:text-textprimary  hover:bg-blue-100 px-3 py-2 rounded-lg transition"
+              className="flex items-center gap-3 text-primary hover:text-textprimary hover:bg-blue-100 px-3 py-2 rounded-lg transition"
             >
               <item.icon className="h-6 w-6" />
               <span className="text-md">{item.name}</span>
