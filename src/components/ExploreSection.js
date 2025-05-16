@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 
 export default function ExploreSection() {
@@ -8,7 +9,7 @@ export default function ExploreSection() {
           className="text-3xl md:text-4xl font-extrabold text-textprimary"
           style={{ textShadow: "2px 2px 6px rgba(147, 197, 253, 0.7)" }}
         >
-         Explore Our Simulations
+          Explore Our Simulations
         </h2>
 
         <p className="text-secondary max-w-2xl mx-auto">
@@ -23,36 +24,42 @@ export default function ExploreSection() {
               title: "Physics Lab",
               image: "/assets/images/physics-lab.jpeg",
               desc: "Conduct motion, optics, and electricity experiments virtually.",
+              path: "physics-game",
             },
             {
               title: "Chemistry Lab",
               image: "/assets/images/chemistry-lab.jpeg",
               desc: "Mix chemicals, observe reactions, and understand compounds safely.",
+              path: "chemistry-game",
             },
             {
               title: "ICT Lab",
               image: "/assets/images/ict-lab.jpeg",
               desc: "Learn coding, simulations, and digital logic with drag-and-drop tools.",
+              path: "ict-game",
             },
-          ].map((sim, i) => (
-            <div
-              key={i}
-              className="rounded-xl shadow-md bg-white hover:shadow-xl hover:scale-105 transition-transform duration-300 overflow-hidden"
+          ].map((sim) => (
+            <Link
+              key={sim.title}
+              href={`/games/${sim.path}`}
+              className="rounded-xl shadow-md bg-white hover:shadow-xl hover:scale-105 transition-transform duration-300 overflow-hidden cursor-pointer block"
             >
-              <Image
-                src={sim.image}
-                alt={sim.title}
-                width={400}
-                height={300}
-                className="object-cover w-full h-56"
-              />
-              <div className="p-4 text-left">
-                <h3 className="text-xl font-semibold text-primary">
-                  {sim.title}
-                </h3>
-                <p className="text-secondary text-sm mt-2">{sim.desc}</p>
+              <div>
+                <Image
+                  src={sim.image}
+                  alt={sim.title}
+                  width={400}
+                  height={300}
+                  className="object-cover w-full h-56"
+                />
+                <div className="p-4 text-left">
+                  <h3 className="text-xl font-semibold text-primary">
+                    {sim.title}
+                  </h3>
+                  <p className="text-secondary text-sm mt-2">{sim.desc}</p>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
