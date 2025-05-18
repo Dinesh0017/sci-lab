@@ -1,91 +1,97 @@
-// app/games/physics-game/page.js
+// app/physics-lab/page.js
 "use client";
 
-import { useState } from "react";
-import { motion } from "framer-motion";
+import React from "react";
 
-const components = [
-  { name: "Battery", voltage: 1.5 },
-  { name: "Wire", resistance: 1 },
-  { name: "Bulb", requiredVoltage: 1.5 },
+const physicsTopics = [
+  {
+    term: "Newton's Laws of Motion",
+    desc: "Three fundamental laws that describe the relationship between a body and the forces acting upon it.",
+    details: (
+      <>
+        <ul className="list-disc list-inside">
+          <li><strong>1st Law (Inertia):</strong> A body remains at rest or in uniform motion unless acted upon by a force.</li>
+          <li><strong>2nd Law:</strong> Force = Mass × Acceleration (F = ma).</li>
+          <li><strong>3rd Law:</strong> For every action, there is an equal and opposite reaction.</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    term: "Work, Energy & Power",
+    desc: "Core concepts that describe how force causes movement and how energy is transferred.",
+    details: (
+      <>
+        <p><strong>Work:</strong> Force × Distance (in direction of force). Unit: Joule (J)</p>
+        <p><strong>Kinetic Energy:</strong> (1/2)mv² &nbsp;&nbsp; <strong>Potential Energy:</strong> mgh</p>
+        <p><strong>Power:</strong> Work / Time. Unit: Watt (W)</p>
+      </>
+    ),
+  },
+  {
+    term: "Electricity Basics",
+    desc: "Fundamentals of electric charge, current, voltage, resistance, and power.",
+    details: (
+      <>
+        <ul className="list-disc list-inside">
+          <li><strong>Current (I):</strong> Flow of electrons. Unit: Ampere (A)</li>
+          <li><strong>Voltage (V):</strong> Electrical potential difference</li>
+          <li><strong>Resistance (R):</strong> Opposition to current. Ohm’s Law: V = IR</li>
+          <li><strong>Power (P):</strong> P = VI</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    term: "Waves & Sound",
+    desc: "Study of periodic oscillations that transport energy through space or matter.",
+    details: (
+      <>
+        <p><strong>Wave Types:</strong> Transverse (light), Longitudinal (sound)</p>
+        <p><strong>Speed:</strong> v = f × λ (velocity = frequency × wavelength)</p>
+        <p><strong>Sound:</strong> Mechanical wave that requires a medium to travel.</p>
+      </>
+    ),
+  },
+  {
+    term: "Units & Measurement",
+    desc: "SI Units used for accurate scientific calculations and experiments.",
+    details: (
+      <>
+        <ul className="list-disc list-inside">
+          <li><strong>Length:</strong> meter (m)</li>
+          <li><strong>Mass:</strong> kilogram (kg)</li>
+          <li><strong>Time:</strong> second (s)</li>
+          <li><strong>Temperature:</strong> kelvin (K)</li>
+        </ul>
+        <p>Always use SI units when solving physics problems unless specified otherwise.</p>
+      </>
+    ),
+  },
 ];
 
-export default function PhysicsGame() {
-  const [circuit, setCircuit] = useState([]);
-  const [result, setResult] = useState(null);
-
-  const onDrop = (e) => {
-    const comp = e.dataTransfer.getData("text");
-    setCircuit((prev) => [...prev, comp]);
-  };
-
-  const buildCircuit = () => {
-    const hasBattery = circuit.includes("Battery");
-    const hasBulb = circuit.includes("Bulb");
-    const hasWire = circuit.includes("Wire");
-    if (hasBattery && hasBulb && hasWire) {
-      setResult("💡 Bulb Lights Up! Circuit is Complete");
-    } else {
-      setResult("⚠️ Incomplete Circuit. Try Again.");
-    }
-  };
-
+export default function PhysicsLabPage() {
   return (
-    <main className="min-h-screen bg-muted text-white p-6 flex flex-col items-center">
-      <h1 className="text-4xl font-bold mb-4 text-center">Build a Simple Circuit</h1>
-      <p className="mb-6 text-center max-w-xl">
-        Drag and drop components to the circuit board. Try to light the bulb by
-        completing the circuit!
-      </p>
+    <main className="min-h-screen bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white p-6">
+      <section className="max-w-5xl mx-auto">
+        <h1 className="text-4xl font-bold text-center mb-8">🔬 Physics Lab Essentials</h1>
+        <p className="text-center text-gray-300 mb-12 max-w-2xl mx-auto">
+          Understand the key building blocks of physics! Here are simplified explanations of some of the most important topics you’ll study.
+        </p>
 
-      <div className="flex gap-4 flex-wrap justify-center mb-6">
-        {components.map((comp, i) => (
-          <div
-            key={i}
-            draggable
-            onDragStart={(e) => e.dataTransfer.setData("text", comp.name)}
-            className="bg-white text-black px-4 py-2 rounded shadow cursor-grab hover:shadow-xl"
-          >
-            {comp.name}
-          </div>
-        ))}
-      </div>
-
-      <div
-        onDragOver={(e) => e.preventDefault()}
-        onDrop={onDrop}
-        className="w-full max-w-lg min-h-[200px] bg-white text-black border-4 border-dashed border-yellow-400 rounded-xl flex flex-wrap gap-4 p-4 justify-center items-center"
-      >
-        {circuit.length === 0
-          ? "Drop components here"
-          : circuit.map((c, i) => (
-              <motion.div
-                key={c + i}
-                className="bg-yellow-100 text-black px-3 py-2 rounded shadow"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-              >
-                {c}
-              </motion.div>
-            ))}
-      </div>
-
-      <button
-        onClick={buildCircuit}
-        className="mt-6 bg-primary text-white px-6 py-2 rounded hover:bg-yellow-700"
-      >
-        Test Circuit
-      </button>
-
-      {result && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="mt-6 text-2xl"
-        >
-          {result}
-        </motion.div>
-      )}
+        <ul className="space-y-6">
+          {physicsTopics.map(({ term, desc, details }) => (
+            <li
+              key={term}
+              className="bg-white text-black p-6 rounded-lg shadow-lg transition hover:shadow-xl"
+            >
+              <h2 className="text-2xl font-semibold mb-2">{term}</h2>
+              <p className="mb-3 text-gray-700">{desc}</p>
+              <div className="text-gray-700 prose prose-sm max-w-none">{details}</div>
+            </li>
+          ))}
+        </ul>
+      </section>
     </main>
   );
 }

@@ -24,24 +24,24 @@ export default function ExploreSection() {
               title: "Physics Lab",
               image: "/assets/images/physics-lab.jpeg",
               desc: "Conduct motion, optics, and electricity experiments virtually.",
-              path: "physics-game",
+              path: "physics-lab",
             },
             {
               title: "Chemistry Lab",
               image: "/assets/images/chemistry-lab.jpeg",
               desc: "Mix chemicals, observe reactions, and understand compounds safely.",
-              path: "chemistry-game",
+              path: "chemistry-lab",
             },
             {
               title: "ICT Lab",
               image: "/assets/images/ict-lab.jpeg",
               desc: "Learn coding, simulations, and digital logic with drag-and-drop tools.",
-              path: "ict-game",
+              path: "ict-lab",
             },
           ].map((sim) => (
             <Link
               key={sim.title}
-              href={`/games/${sim.path}`}
+              href={`/labs/${sim.path}`}
               className="rounded-xl shadow-md bg-white hover:shadow-xl hover:scale-105 transition-transform duration-300 overflow-hidden cursor-pointer block"
             >
               <div>
