@@ -1,4 +1,3 @@
-// app/lab/chemistry/page.js
 "use client";
 
 import React from "react";
@@ -21,13 +20,14 @@ const bonds = [
 
 export default function ChemistryLab() {
   return (
-    <main className="min-h-screen bg-gray-50 text-gray-900 p-6 max-w-7xl mx-auto font-sans">
-      <h1 className="text-4xl font-extrabold mb-6 text-center text-indigo-700">
-        Chemistry Lab: Periodic Table & Basics
+    <main className="min-h-screen bg-primary text-white p-6 mx-5" >
+      <h1 className="text-3xl md:text-4xl font-extrabold text-textprimary mb-6 text-center"
+            style={{ textShadow: "2px 2px 6px rgba(147, 197, 253, 0.7)" }}>
+        Periodic Table & Basics
       </h1>
 
       {/* Periodic Table Section */}
-      <section className="mb-10">
+      <section className="mb-10 max-w-5xl mx-auto">
         <h2 className="text-2xl font-semibold mb-4">Periodic Table (Elements 1-103)</h2>
         <div className="grid grid-cols-18 gap-1 bg-white p-4 rounded-lg shadow-md overflow-x-auto">
           {/* Create a 7 row, 18 column grid*/}
@@ -59,7 +59,7 @@ export default function ChemistryLab() {
       </section>
 
       {/* Atomic Structure */}
-      <section className="mb-10 bg-white p-6 rounded-lg shadow-md">
+      <section className="mb-10 bg-white p-6 rounded-lg shadow-md max-w-5xl mx-auto">
         <h2 className="text-2xl font-semibold mb-3 text-indigo-700">Atomic Structure Basics</h2>
         <p className="mb-2">
           Atoms consist of a nucleus containing protons and neutrons, with electrons orbiting in shells around it.
@@ -74,7 +74,7 @@ export default function ChemistryLab() {
       </section>
 
       {/* Groups and Families */}
-      <section className="mb-10 bg-white p-6 rounded-lg shadow-md">
+      <section className="mb-10 bg-white p-6 rounded-lg shadow-md max-w-5xl mx-auto">
         <h2 className="text-2xl font-semibold mb-3 text-indigo-700">Common Groups / Families</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {groups.map((group) => (
@@ -87,7 +87,7 @@ export default function ChemistryLab() {
       </section>
 
       {/* Chemical Bonds */}
-      <section className="mb-10 bg-white p-6 rounded-lg shadow-md">
+      <section className="mb-10 bg-white p-6 rounded-lg shadow-md max-w-5xl mx-auto">
         <h2 className="text-2xl font-semibold mb-3 text-indigo-700">Basic Chemical Bonds</h2>
         <ul className="space-y-3">
           {bonds.map(({ type, description }) => (
@@ -104,7 +104,7 @@ export default function ChemistryLab() {
       </section>
 
       {/* Quick Facts */}
-      <section className="mb-10 bg-white p-6 rounded-lg shadow-md">
+      <section className="mb-10 bg-white p-6 rounded-lg shadow-md max-w-5xl mx-auto">
         <h2 className="text-2xl font-semibold mb-3 text-indigo-700">Quick Chemistry Facts</h2>
         <ul className="list-disc list-inside space-y-1 text-gray-700">
           <li>Water (H<sub>2</sub>O) is the universal solvent.</li>

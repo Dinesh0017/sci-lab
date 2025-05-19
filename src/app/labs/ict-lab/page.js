@@ -151,8 +151,9 @@ export default function IctLabPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-gray-50 text-gray-900 max-w-5xl mx-auto p-6 space-y-16">
-      <h1 className="text-4xl font-bold text-center mb-8">ICT Lab - Basics</h1>
+    <main className="min-h-screen bg-primary text-primary p-6 mx-5">
+      <h1 className="text-3xl md:text-4xl font-extrabold text-textprimary mb-6 text-center"
+            style={{ textShadow: "2px 2px 6px rgba(147, 197, 253, 0.7)" }}>ICT Lab - Basics</h1>
 
       {/* Logic Gates Section */}
       <section>
