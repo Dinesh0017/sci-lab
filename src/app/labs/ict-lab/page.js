@@ -1,4 +1,3 @@
-// app/ict-lab/page.jsx (or wherever you want to place it)
 "use client";
 
 import React, { useState } from "react";
@@ -52,21 +51,13 @@ export default function IctLabPage() {
   const handleBinaryChange = (e) => {
     const val = e.target.value.replace(/[^01]/g, "");
     setBinary(val);
-    if (val) {
-      setDecimal(parseInt(val, 2).toString(10));
-    } else {
-      setDecimal("");
-    }
+    setDecimal(val ? parseInt(val, 2).toString(10) : "");
   };
 
   const handleDecimalChange = (e) => {
     const val = e.target.value.replace(/[^0-9]/g, "");
     setDecimal(val);
-    if (val) {
-      setBinary(parseInt(val, 10).toString(2));
-    } else {
-      setBinary("");
-    }
+    setBinary(val ? parseInt(val, 10).toString(2) : "");
   };
 
   const networkingBasics = [
@@ -75,14 +66,8 @@ export default function IctLabPage() {
       desc: "A unique numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication.",
       details: (
         <>
-          <p>
-            <strong>Example:</strong> 192.168.1.1 (IPv4), or
-            2001:0db8:85a3::8a2e:0370:7334 (IPv6)
-          </p>
-          <p>
-            An IP address consists of two parts: the network part and the host
-            part.
-          </p>
+          <p><strong>Example:</strong> 192.168.1.1 (IPv4), or 2001:0db8:85a3::8a2e:0370:7334 (IPv6)</p>
+          <p>An IP address consists of two parts: the network part and the host part.</p>
         </>
       ),
     },
@@ -91,26 +76,13 @@ export default function IctLabPage() {
       desc: "Defines which portion of an IP address refers to the network and which part refers to the host (device).",
       details: (
         <>
-          <p>
-            <strong>Example Subnet Mask:</strong> 255.255.255.0
-          </p>
-          <p>
-            Subnet masks allow the segmentation of a network into smaller
-            subnetworks (subnets).
-          </p>
-          <p>
-            <strong>Classful Subnets:</strong>
-          </p>
+          <p><strong>Example Subnet Mask:</strong> 255.255.255.0</p>
+          <p>Subnet masks allow the segmentation of a network into smaller subnetworks (subnets).</p>
+          <p><strong>Classful Subnets:</strong></p>
           <ul className="list-disc list-inside">
-            <li>
-              <strong>Class A:</strong> 255.0.0.0 (Supports 16 million hosts)
-            </li>
-            <li>
-              <strong>Class B:</strong> 255.255.0.0 (Supports 65,000 hosts)
-            </li>
-            <li>
-              <strong>Class C:</strong> 255.255.255.0 (Supports 254 hosts)
-            </li>
+            <li><strong>Class A:</strong> 255.0.0.0 (Supports 16 million hosts)</li>
+            <li><strong>Class B:</strong> 255.255.0.0 (Supports 65,000 hosts)</li>
+            <li><strong>Class C:</strong> 255.255.255.0 (Supports 254 hosts)</li>
           </ul>
         </>
       ),
@@ -120,15 +92,8 @@ export default function IctLabPage() {
       desc: "A device that forwards data packets between computer networks, creating an overlay internetwork.",
       details: (
         <>
-          <p>
-            Routers manage traffic between different networks by forwarding data
-            packets to their intended IP addresses.
-          </p>
-          <p>
-            They often perform NAT (Network Address Translation) to allow
-            multiple devices on a local network to share a single public IP
-            address.
-          </p>
+          <p>Routers manage traffic between different networks by forwarding data packets to their intended IP addresses.</p>
+          <p>They often perform NAT (Network Address Translation) to allow multiple devices on a local network to share a single public IP address.</p>
         </>
       ),
     },
@@ -137,52 +102,43 @@ export default function IctLabPage() {
       desc: "Translates human-readable domain names (like example.com) into IP addresses that computers use to identify each other.",
       details: (
         <>
-          <p>
-            DNS servers maintain a directory of domain names and translate them
-            to IP addresses upon request.
-          </p>
-          <p>
-            Example: When you enter <em>google.com</em>, DNS translates it to
-            its IP address like 172.217.10.46.
-          </p>
+          <p>DNS servers maintain a directory of domain names and translate them to IP addresses upon request.</p>
+          <p>Example: When you enter <em>google.com</em>, DNS translates it to its IP address like 172.217.10.46.</p>
         </>
       ),
     },
   ];
 
   return (
-    <main className="min-h-screen bg-primary text-primary p-6 mx-5">
-      <h1 className="text-3xl md:text-4xl font-extrabold text-textprimary mb-6 text-center"
-            style={{ textShadow: "2px 2px 6px rgba(147, 197, 253, 0.7)" }}>ICT Lab - Basics</h1>
+    <main className="min-h-screen bg-primary text-primary p-4 md:p-10 mx-5">
+      <h1 className="text-4xl md:text-5xl font-extrabold text-textprimary text-center mb-12"
+          style={{ textShadow: "2px 2px 6px rgba(147, 197, 253, 0.7)" }}>
+        ICT Lab - Basics
+      </h1>
 
-      {/* Logic Gates Section */}
-      <section>
-        <h2 className="text-3xl font-semibold mb-6 border-b-2 border-blue-600 pb-2">
-          Logic Gates
-        </h2>
-
-        <div className="flex flex-wrap gap-4 mb-6">
+      {/* Logic Gates */}
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold border-b-2 border-blue-500 text-white pb-2 mb-6">Logic Gates</h2>
+        <div className="flex flex-wrap justify-center gap-3 mb-6">
           {gates.map((gate) => (
             <button
               key={gate.name}
               onClick={() => setSelectedGate(gate)}
-              className={`px-5 py-2 rounded shadow font-semibold transition-colors ${
-                selectedGate.name === gate.name
+              className={`px-5 py-2 rounded-xl font-semibold transition-colors duration-300 shadow-md
+                ${selectedGate.name === gate.name
                   ? "bg-blue-600 text-white"
-                  : "bg-gray-200 text-gray-700 hover:bg-blue-400 hover:text-white"
-              }`}
+                  : "bg-gray-100 text-gray-700 hover:bg-blue-400 hover:text-white"}`}
             >
               {gate.name} ({gate.symbol})
             </button>
           ))}
         </div>
-
-        <div className="max-w-md mx-auto bg-white p-6 rounded-lg shadow">
-          <h3 className="text-2xl font-bold mb-3">
+        <div className="bg-white p-6 rounded-xl shadow-md max-w-xl mx-auto">
+          <h3 className="text-2xl font-bold mb-4 text-center">
             {selectedGate.name} Gate ({selectedGate.symbol})
           </h3>
-          <table className="w-full border-collapse border border-gray-300 text-center">
-            <thead>
+          <table className="w-full border border-gray-300 text-center">
+            <thead className="bg-gray-100">
               <tr>
                 <th className="border border-gray-300 px-4 py-2">A</th>
                 {selectedGate.name !== "NOT" && (
@@ -193,14 +149,12 @@ export default function IctLabPage() {
             </thead>
             <tbody>
               {selectedGate.truthTable.map((row, i) => (
-                <tr key={i} className="hover:bg-blue-50">
+                <tr key={i} className="hover:bg-blue-50 transition">
                   <td className="border border-gray-300 px-4 py-2">{row.A}</td>
                   {selectedGate.name !== "NOT" && (
-                    <td className="border border-gray-300 px-4 py-2">
-                      {row.B}
-                    </td>
+                    <td className="border border-gray-300 px-4 py-2">{row.B}</td>
                   )}
-                  <td className="border border-gray-300 px-4 py-2 font-semibold">
+                  <td className="border border-gray-300 px-4 py-2 font-bold text-blue-700">
                     {row.Out}
                   </td>
                 </tr>
@@ -210,57 +164,48 @@ export default function IctLabPage() {
         </div>
       </section>
 
-      {/* Binary Converter Section */}
-      <section>
-        <h2 className="text-3xl font-semibold mb-6 border-b-2 border-green-600 pb-2">
-          Binary & Decimal Converter
-        </h2>
-
-        <div className="max-w-md mx-auto bg-white p-6 rounded-lg shadow space-y-6">
+      {/* Binary & Decimal Converter */}
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold border-b-2 text-white border-green-500 pb-2 mb-6">Binary & Decimal Converter</h2>
+        <div className="bg-white p-6 rounded-xl shadow-md max-w-xl mx-auto space-y-6">
           <div>
-            <label className="block mb-1 font-medium">Binary</label>
+            <label className="block text-lg font-medium mb-1">Binary</label>
             <input
               type="text"
               value={binary}
               onChange={handleBinaryChange}
               placeholder="Enter binary number"
-              className="w-full border border-gray-300 rounded px-3 py-2 font-mono text-lg"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 font-mono text-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
           </div>
-
           <div>
-            <label className="block mb-1 font-medium">Decimal</label>
+            <label className="block text-lg font-medium mb-1">Decimal</label>
             <input
               type="text"
               value={decimal}
               onChange={handleDecimalChange}
               placeholder="Enter decimal number"
-              className="w-full border border-gray-300 rounded px-3 py-2 text-lg"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-lg focus:outline-none focus:ring-2 focus:ring-green-400"
             />
           </div>
         </div>
       </section>
 
-      {/* Networking Basics Section */}
+      {/* Networking Basics */}
       <section>
-        <h2 className="text-3xl font-semibold mb-6 border-b-2 border-purple-600 pb-2">
-          Networking Basics
-        </h2>
-
-        <ul className="max-w-3xl mx-auto space-y-6">
+        <h2 className="text-3xl font-bold border-b-2 border-purple-500 pb-2 mb-6">Networking Basics</h2>
+        <div className="grid gap-8 md:grid-cols-2">
           {networkingBasics.map(({ term, desc, details }) => (
-            <li
+            <div
               key={term}
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
+              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300"
             >
-              <h3 className="text-2xl font-semibold mb-2">{term}</h3>
+              <h3 className="text-2xl font-semibold mb-2 text-blue-700">{term}</h3>
               <p className="text-gray-700 mb-3">{desc}</p>
-              <div className="text-gray-600 prose prose-sm max-w-none">
-                {details}
-              </div>
-            </li>
+              <div className="text-gray-600 prose prose-sm max-w-none">{details}</div>
+            </div>
           ))}
-        </ul>
+        </div>
       </section>
     </main>
   );
