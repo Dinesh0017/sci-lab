@@ -106,7 +106,7 @@ const physicsTopics = [
 
 export default function PhysicsLabPage() {
   return (
-    <main className="min-h-screen bg-primary text-white px-4 py-10 md:px-8">
+    <main className="min-h-screen bg-primary text-white px-4 py-10 md:px-8 mx-5">
       <section className="max-w-6xl mx-auto">
         <h1 className="text-center text-3xl sm:text-4xl font-bold mb-4">
           🔬 <span className="text-textprimary drop-shadow-md">Physics Lab Essentials</span>
