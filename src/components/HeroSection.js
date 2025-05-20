@@ -1,7 +1,10 @@
-// components/HeroSection.js
+'use client';
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function HeroSection() {
+  const router = useRouter();
+
   return (
     <section className="text-foreground mb-5 px-6 bg-blue-200/80 py-10 mx-5">
       <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row gap-12 items-center">
@@ -9,7 +12,7 @@ export default function HeroSection() {
         <div className="space-y-6 text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
           <p
             className="text-textprimary text-xl sm:text-2xl font-semibold tracking-wide"
-            style={{ textShadow: "2px 2px 6px  rgba(147, 197, 253, 0.7)" }}
+            style={{ textShadow: "2px 2px 6px rgba(147, 197, 253, 0.7)" }}
           >
             Interactive Science Education
           </p>
@@ -24,60 +27,40 @@ export default function HeroSection() {
           </p>
 
           <div className="flex justify-center lg:justify-start gap-4 mt-6 flex-wrap">
-            <button className="bg-buttonprimary hover:bg-buttonhover text-white px-6 py-3 rounded-lg transition duration-300 shadow-md">
+            <button
+              onClick={() => router.push("/learning")}
+              className="bg-buttonprimary hover:bg-buttonhover text-white px-6 py-3 rounded-lg transition duration-300 shadow-md"
+            >
               Start Learning
             </button>
-            <button className="bg-background text-buttontext border border-buttontext hover:bg-buttonhover hover:text-white px-6 py-3 rounded-lg transition duration-300 shadow-md">
+            <button
+              onClick={() => router.push("/simulations")}
+              className="bg-background text-buttontext border border-buttontext hover:bg-buttonhover hover:text-white px-6 py-3 rounded-lg transition duration-300 shadow-md"
+            >
               Explore Simulations
             </button>
           </div>
         </div>
 
         {/* 2x2 Image Grid Section */}
-        <div className="hidden lg:grid grid-cols-2 gap-6 w-fit ">
-          {/* Top-left image */}
-          <div className="w-60 h-60 overflow-hidden rounded-tl-[5rem] shadow-xl hover:scale-110 transition-transform duration-300">
-            <Image
-              src="/assets/images/hero1.jpg"
-              alt="Person 1"
-              width={160}
-              height={160}
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          {/* Top-right image */}
-          <div className="w-60 h-60 overflow-hidden shadow-xl hover:scale-110 transition-transform duration-300">
-            <Image
-              src="/assets/images/hero2.jpg"
-              alt="Person 2"
-              width={160}
-              height={160}
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          {/* Bottom-left image */}
-          <div className="w-60 h-60 overflow-hidden shadow-xl hover:scale-110 transition-transform duration-300">
-            <Image
-              src="/assets/images/hero3.jpg"
-              alt="Person 3"
-              width={160}
-              height={160}
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          {/* Bottom-right image */}
-          <div className="w-60 h-60 overflow-hidden rounded-br-[5rem] shadow-xl hover:scale-110 transition-transform duration-300">
-            <Image
-              src="/assets/images/hero4.jpg"
-              alt="Person 4"
-              width={160}
-              height={160}
-              className="w-full h-full object-cover"
-            />
-          </div>
+        <div className="hidden lg:grid grid-cols-2 gap-6 w-fit">
+          {/* Images (same as before) */}
+          {[1, 2, 3, 4].map((num, index) => (
+            <div
+              key={index}
+              className={`w-60 h-60 overflow-hidden shadow-xl hover:scale-110 transition-transform duration-300 ${
+                num === 1 ? "rounded-tl-[5rem]" : num === 4 ? "rounded-br-[5rem]" : ""
+              }`}
+            >
+              <Image
+                src={`/assets/images/hero${num}.jpg`}
+                alt={`Person ${num}`}
+                width={160}
+                height={160}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
         </div>
       </div>
       <hr className="mt-16 border-2 border-gray-400" />

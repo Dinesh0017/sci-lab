@@ -111,8 +111,7 @@ export default function IctLabPage() {
 
   return (
     <main className="min-h-screen bg-primary text-primary p-4 md:p-10 mx-5">
-      <h1 className="text-4xl md:text-5xl font-extrabold text-textprimary text-center mb-12"
-          style={{ textShadow: "2px 2px 6px rgba(147, 197, 253, 0.7)" }}>
+      <h1  className="text-center text-3xl sm:text-4xl font-bold mb-4 text-textprimary drop-shadow-md">
         ICT Lab - Basics
       </h1>
 

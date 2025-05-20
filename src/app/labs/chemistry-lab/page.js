@@ -29,8 +29,7 @@ export default function ChemistryLab() {
   return (
     <main className="min-h-screen bg-primary text-white p-4 sm:p-6 md:p-10 mx-5">
       <h1
-        className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-textprimary mb-8 text-center"
-        style={{ textShadow: "2px 2px 6px rgba(147, 197, 253, 0.7)" }}
+        className="text-center text-3xl sm:text-4xl font-bold mb-4 text-textprimary drop-shadow-md"
       >
         Periodic Table & Basics
       </h1>
