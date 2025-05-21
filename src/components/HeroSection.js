@@ -1,6 +1,7 @@
-'use client';
+"use client";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { BookOpen, FlaskConical } from "lucide-react";
 
 export default function HeroSection() {
   const router = useRouter();
@@ -29,14 +30,18 @@ export default function HeroSection() {
           <div className="flex justify-center lg:justify-start gap-4 mt-6 flex-wrap">
             <button
               onClick={() => router.push("/learning")}
-              className="bg-buttonprimary hover:bg-buttonhover text-white px-6 py-3 rounded-lg transition duration-300 shadow-md"
+              className="flex items-center gap-2 bg-background text-buttontext border border-buttontext hover:bg-buttonhover hover:text-white hover:scale-105 hover:shadow-xl px-6 py-3 rounded-xl transition-all duration-300 font-semibold shadow-md"
+              
             >
+              <BookOpen size={18} />
               Start Learning
             </button>
+
             <button
               onClick={() => router.push("/simulations")}
-              className="bg-background text-buttontext border border-buttontext hover:bg-buttonhover hover:text-white px-6 py-3 rounded-lg transition duration-300 shadow-md"
+              className="flex items-center gap-2 bg-blue-900 text-buttontext border border-buttontext hover:bg-background  hover:scale-105 hover:shadow-xl px-6 py-3 rounded-xl transition-all duration-300 font-semibold shadow-md"
             >
+              <FlaskConical size={18} />
               Explore Simulations
             </button>
           </div>
@@ -49,7 +54,11 @@ export default function HeroSection() {
             <div
               key={index}
               className={`w-60 h-60 overflow-hidden shadow-xl hover:scale-110 transition-transform duration-300 ${
-                num === 1 ? "rounded-tl-[5rem]" : num === 4 ? "rounded-br-[5rem]" : ""
+                num === 1
+                  ? "rounded-tl-[5rem]"
+                  : num === 4
+                  ? "rounded-br-[5rem]"
+                  : ""
               }`}
             >
               <Image
