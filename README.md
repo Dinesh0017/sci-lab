@@ -8,7 +8,7 @@ This project is built using **Next.js** and **Tailwind CSS**, with a custom them
 
 ## 🌐 Live Preview
 
-🚀 [**Launch SciLab360**](https://scilab360.netlify.app/) 
+🚀 [**Launch SciLab360**](https://sci-lab360.netlify.app/)
 
 ---
 
